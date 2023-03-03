@@ -17,7 +17,7 @@ jobs:
       - run: ./download_blacklist.sh
           
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@4
+        uses: peter-evans/create-pull-request@v4
         with:
           #base: master
           commit-message: Auto-update blacklists from pfSense FTP
