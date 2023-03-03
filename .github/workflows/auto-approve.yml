@@ -2,7 +2,7 @@ name: Auto approve
 
 on: 
   schedule: 
-    - cron: '14 19 * * *'
+    - cron: '15 19 * * *'
   pull_request:
 jobs:
   auto-approve:
