@@ -19,7 +19,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@6bb739433928fbc2bdc635d41105e124d0dce021
         with:
-          base: master
+          #base: master
           commit-message: Auto-update blacklists from pfSense FTP
-          branch: main
+          #branch: main
           title: '[Bot] Update blacklists from pfSense FTP'
