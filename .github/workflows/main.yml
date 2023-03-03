@@ -21,5 +21,5 @@ jobs:
         with:
           base: master
           commit-message: Auto-update blacklists from pfSense FTP
-          branch: auto-certificate-updates
+          branch: main
           title: '[Bot] Update blacklists from pfSense FTP'
