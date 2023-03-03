@@ -1,0 +1,24 @@
+name: Renew blacklists
+
+on:
+  schedule: 
+    - cron: '0 18 * * *'
+  push:
+    paths:
+      - 'download_blacklist.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: ./download_blacklist.sh
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@6bb739433928fbc2bdc635d41105e124d0dce021
+        with:
+          base: master
+          commit-message: Auto-update blacklists from pfSense FTP
+          branch: auto-certificate-updates
+          title: '[Bot] Update blacklists from pfSense FTP'
