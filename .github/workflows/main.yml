@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - run: chmod +x download_blacklist.sh
       - run: ./download_blacklist.sh
           
       - name: Create Pull Request
