@@ -2,8 +2,8 @@ name: Auto approve
 
 on: 
   schedule: 
-    - cron: '15 19 * * *'
-  pull_request:
+    - cron: '20 19 * * *'
+
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
