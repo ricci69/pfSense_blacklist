@@ -12,7 +12,8 @@ jobs:
       - uses: hmarr/auto-approve-action@v3
         with:
           review-message: "Auto approved automated PR"
-          
-      - uses: alexwilson/enable-github-automerge-action@main  
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+# TODO: I need to create an authentication token          
+#      - uses: alexwilson/enable-github-automerge-action@main  
+#        with:
+#          github-token: "${{ secrets.GITHUB_TOKEN }}"
