@@ -1,11 +1,11 @@
 name: Renew blacklists
 
 on:
-  schedule: 
-    - cron: '0 18 * * *'
+#  schedule: 
+#    - cron: '0 18 * * *'
   push:
-#    paths:
-#      - 'download_blacklist.sh'
+    paths:
+      - 'download_blacklist.sh'
 
 jobs:
   build:
@@ -22,12 +22,4 @@ jobs:
           #base: master
           commit-message: Auto-update blacklists from pfSense FTP
           #branch: main
-          title: '[Bot] Update blacklists from pfSense FTP'
-        
-  auto-approve:
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-#    if: github.actor == 'ricci69'
-    steps:
-      - uses: hmarr/auto-approve-action@v3       
+          title: '[Bot] Update blacklists from pfSense FTP'   
